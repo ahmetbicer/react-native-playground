@@ -786,6 +786,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@flyerhq/react-native-keyboard-accessory-view@^2.3.3":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@flyerhq/react-native-keyboard-accessory-view/-/react-native-keyboard-accessory-view-2.3.3.tgz#e79f9f8150d3eff06839698b1e0fde2ea1a7bc0c"
+  integrity sha512-qaigS/vKa2j6T0sJveCCL81xJjmf6Sw7JNjb85oVnfHQZMebvJvhX+ABNpc4G9tje2naOUlAduRBPaznTbZxkA==
+
 "@hapi/hoek@^9.0.0":
   version "9.2.1"
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.2.1.tgz#9551142a1980503752536b5050fd99f4a7f13b17"
