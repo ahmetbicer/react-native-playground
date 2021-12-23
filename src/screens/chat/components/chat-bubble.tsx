@@ -1,3 +1,4 @@
+import {LinkPreview} from '@flyerhq/react-native-link-preview';
 import React, {useEffect} from 'react';
 import {Text, View, ViewStyle} from 'react-native';
 
@@ -8,22 +9,26 @@ interface ChatBubbleProps {
 
 const BUBBLE: ViewStyle = {
   margin: 10,
-  padding: 20,
+  padding: 12,
   backgroundColor: 'pink',
-  borderRadius: 15,
+  borderTopLeftRadius: 15,
+  borderTopRightRadius: 15,
 };
 
 const ChatBubble = (props: ChatBubbleProps) => {
   const {text, isSelf} = props;
-  console.log('rendered', text);
+
   const BUBBLE_POSITION: ViewStyle = {
     alignSelf: isSelf ? 'flex-end' : 'flex-start',
+    borderBottomLeftRadius: isSelf ? 15 : 0,
+    borderBottomRightRadius: isSelf ? 0 : 15,
   };
 
   useEffect(() => {}, []);
   return (
     <View style={[BUBBLE, BUBBLE_POSITION]}>
       <Text>{text}</Text>
+      {/* <LinkPreview text={text} /> */}
     </View>
   );
 };

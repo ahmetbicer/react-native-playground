@@ -1,6 +1,6 @@
 import {useNavigation} from '@react-navigation/native';
 import React, {useState} from 'react';
-import {Pressable, Text, TextInput, View, ViewStyle} from 'react-native';
+import {TextInput, View, ViewStyle} from 'react-native';
 
 interface ChatInputProps {
   addMessage: (text: string) => void;

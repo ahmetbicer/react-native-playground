@@ -1,6 +1,6 @@
 import {KeyboardAccessoryView} from '@flyerhq/react-native-keyboard-accessory-view';
 import React, {useState} from 'react';
-import {FlatList, GestureResponderHandlers, Text, View} from 'react-native';
+import {FlatList, GestureResponderHandlers} from 'react-native';
 import {MemoizedChatBubble} from './components/chat-bubble';
 import {ChatInput} from './components/chat-input';
 
