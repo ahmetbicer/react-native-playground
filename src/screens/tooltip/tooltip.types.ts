@@ -8,7 +8,7 @@ export interface LayoutEvent {
 }
 
 export interface TooltipProps {
-  position: 'left' | 'right' | 'top' | 'bottom';
+  position: string;
   target: LayoutEvent;
 }
 
