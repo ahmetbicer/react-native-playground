@@ -9,6 +9,7 @@ export const PlaygroundList = () => {
       <ListItem title="Swiper" />
       <ListItem title="TernaryOperator" />
       <ListItem title="Chat" />
+      <ListItem title="Tooltip" />
     </View>
   );
 };
