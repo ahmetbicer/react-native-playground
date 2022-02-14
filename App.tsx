@@ -10,6 +10,7 @@ import {
   Swiper,
   TernaryOperator,
   TooltipContainer,
+  ZustandMMKV,
 } from './src/screens';
 
 const Stack = createNativeStackNavigator();
@@ -25,6 +26,7 @@ const App = () => {
           <Stack.Screen name="Chat" component={Chat} />
           <Stack.Screen name="Tooltip" component={TooltipContainer} />
           <Stack.Screen name="Dropdown" component={Dropdown} />
+          <Stack.Screen name="ZustandMMKV" component={ZustandMMKV} />
         </Stack.Navigator>
       </NavigationContainer>
     </GestureHandlerRootView>
