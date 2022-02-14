@@ -10,6 +10,7 @@ export const PlaygroundList = () => {
       <ListItem title="TernaryOperator" />
       <ListItem title="Chat" />
       <ListItem title="Tooltip" />
+      <ListItem title="Dropdown" />
     </View>
   );
 };

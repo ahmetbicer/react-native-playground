@@ -5,6 +5,7 @@ import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {NavigationContainer} from '@react-navigation/native';
 import {
   Chat,
+  Dropdown,
   PlaygroundList,
   Swiper,
   TernaryOperator,
@@ -23,6 +24,7 @@ const App = () => {
           <Stack.Screen name="TernaryOperator" component={TernaryOperator} />
           <Stack.Screen name="Chat" component={Chat} />
           <Stack.Screen name="Tooltip" component={TooltipContainer} />
+          <Stack.Screen name="Dropdown" component={Dropdown} />
         </Stack.Navigator>
       </NavigationContainer>
     </GestureHandlerRootView>
