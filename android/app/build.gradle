@@ -230,6 +230,15 @@ android {
         }
     }
 
+    //Without this block build failes in mergeDebugNativeLibs task with this message for every .so files included in packagingOptions block
+
+    //     * What went wrong:
+    // Execution failed for task ':app:mergeDebugNativeLibs'.
+    // > A failure occurred while executing com.android.build.gradle.internal.tasks.MergeNativeLibsTask$MergeNativeLibsTaskWorkAction
+    //    > 2 files found with path 'lib/arm64-v8a/libbutter.so' from inputs:
+    //       - ~/react_n/playground/node_modules/react-native/ReactAndroid/build/intermediates/library_jni/debug/jni/arm64-v8a/libbutter.so
+    //       - ~/.gradle/caches/transforms-3/b6966883a15386cd5ad03c803f98651a/transformed/jetified-react-native-0.68.0-rc.1/jni/arm64-v8a/libbutter.so 
+
     // packagingOptions {
     //     pickFirst '**/libbutter.so'
     //     pickFirst '**/libfb.so'
