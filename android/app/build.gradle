@@ -229,6 +229,41 @@ android {
 
         }
     }
+
+    // packagingOptions {
+    //     pickFirst '**/libbutter.so'
+    //     pickFirst '**/libfb.so'
+    //     pickFirst '**/libglog_init.so'
+    //     pickFirst '**/libhermes-executor-debug.so'
+    //     pickFirst '**/libhermes-executor-release.so'
+    //     pickFirst '**/libjscexecutor.so'
+    //     pickFirst '**/libjsijniprofiler.so'
+    //     pickFirst '**/libjsinspector.so'
+    //     pickFirst '**/liblogger.so'
+    //     pickFirst '**/libmapbufferjni.so'
+    //     pickFirst '**/libreact_config.so'
+    //     pickFirst '**/libreact_render_animations.so'
+    //     pickFirst '**/libreact_render_attributedstring.so'
+    //     pickFirst '**/libreact_render_imagemanager.so'
+    //     pickFirst '**/libreact_render_leakchecker.so'
+    //     pickFirst '**/libreact_render_mapbuffer.so'
+    //     pickFirst '**/libreact_render_mounting.so'
+    //     pickFirst '**/libreact_render_runtimescheduler.so'
+    //     pickFirst '**/libreact_render_scheduler.so'
+    //     pickFirst '**/libreact_render_telemetry.so'
+    //     pickFirst '**/libreact_render_templateprocessor.so'
+    //     pickFirst '**/libreact_render_textlayoutmanager.so'
+    //     pickFirst '**/libreact_render_uimanager.so'
+    //     pickFirst '**/libreact_utils.so'
+    //     pickFirst '**/libreactnativeblob.so'
+    //     pickFirst '**/libreactnativejni.so'
+    //     pickFirst '**/libreactnativeutilsjni.so'
+    //     pickFirst '**/libreactperfloggerjni.so'
+    //     pickFirst '**/librrc_image.so'
+    //     pickFirst '**/librrc_root.so'
+    //     pickFirst '**/librrc_text.so'
+    //     pickFirst '**/librrc_unimplementedview.so'
+    // }
 }
 
 dependencies {
