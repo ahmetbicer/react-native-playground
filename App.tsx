@@ -17,9 +17,12 @@ const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <GestureHandlerRootView style={{flex: 1}}>
+    <GestureHandlerRootView style={{flex: 1, backgroundColor: 'white'}}>
       <NavigationContainer>
-        <Stack.Navigator screenOptions={{headerBackVisible: true}}>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+          }}>
           <Stack.Screen name="PlaygroundList" component={PlaygroundList} />
           <Stack.Screen name="Swiper" component={Swiper} />
           <Stack.Screen name="TernaryOperator" component={TernaryOperator} />

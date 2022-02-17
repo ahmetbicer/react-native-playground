@@ -230,49 +230,16 @@ android {
         }
     }
 
-    //Without this block build failes in mergeDebugNativeLibs task with this message for every .so files included in packagingOptions block
-
-    //     * What went wrong:
-    // Execution failed for task ':app:mergeDebugNativeLibs'.
-    // > A failure occurred while executing com.android.build.gradle.internal.tasks.MergeNativeLibsTask$MergeNativeLibsTaskWorkAction
-    //    > 2 files found with path 'lib/arm64-v8a/libbutter.so' from inputs:
-    //       - ~/react_n/playground/node_modules/react-native/ReactAndroid/build/intermediates/library_jni/debug/jni/arm64-v8a/libbutter.so
-    //       - ~/.gradle/caches/transforms-3/b6966883a15386cd5ad03c803f98651a/transformed/jetified-react-native-0.68.0-rc.1/jni/arm64-v8a/libbutter.so 
-
-    // packagingOptions {
-    //     pickFirst '**/libbutter.so'
-    //     pickFirst '**/libfb.so'
-    //     pickFirst '**/libglog_init.so'
-    //     pickFirst '**/libhermes-executor-debug.so'
-    //     pickFirst '**/libhermes-executor-release.so'
-    //     pickFirst '**/libjscexecutor.so'
-    //     pickFirst '**/libjsijniprofiler.so'
-    //     pickFirst '**/libjsinspector.so'
-    //     pickFirst '**/liblogger.so'
-    //     pickFirst '**/libmapbufferjni.so'
-    //     pickFirst '**/libreact_config.so'
-    //     pickFirst '**/libreact_render_animations.so'
-    //     pickFirst '**/libreact_render_attributedstring.so'
-    //     pickFirst '**/libreact_render_imagemanager.so'
-    //     pickFirst '**/libreact_render_leakchecker.so'
-    //     pickFirst '**/libreact_render_mapbuffer.so'
-    //     pickFirst '**/libreact_render_mounting.so'
-    //     pickFirst '**/libreact_render_runtimescheduler.so'
-    //     pickFirst '**/libreact_render_scheduler.so'
-    //     pickFirst '**/libreact_render_telemetry.so'
-    //     pickFirst '**/libreact_render_templateprocessor.so'
-    //     pickFirst '**/libreact_render_textlayoutmanager.so'
-    //     pickFirst '**/libreact_render_uimanager.so'
-    //     pickFirst '**/libreact_utils.so'
-    //     pickFirst '**/libreactnativeblob.so'
-    //     pickFirst '**/libreactnativejni.so'
-    //     pickFirst '**/libreactnativeutilsjni.so'
-    //     pickFirst '**/libreactperfloggerjni.so'
-    //     pickFirst '**/librrc_image.so'
-    //     pickFirst '**/librrc_root.so'
-    //     pickFirst '**/librrc_text.so'
-    //     pickFirst '**/librrc_unimplementedview.so'
-    // }
+    if (isNewArchitectureEnabled()) {
+        // If new architecture is enabled, we let you build RN from source
+        // Otherwise we fallback to a prebuilt .aar bundled in the NPM package.
+        configurations.all {
+            resolutionStrategy.dependencySubstitution {
+                substitute(module("com.facebook.react:react-native"))
+                        .using(project(":ReactAndroid")).because("On New Architecture we're building React Native from source")
+            }
+        }
+    }
 }
 
 dependencies {
